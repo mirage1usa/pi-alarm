@@ -7,7 +7,7 @@
    This was created as a fun way to keep our daughter on a schedule, while school was closed for COVID-19.
    
 <p align="center">
-<img width="834" height=auto src="Pi-Alarm-example.jpg" alt="Examples of PiAlarm Windows">
+<img width="834" height=auto src="Pi-Alarm-examples.jpg" alt="Examples of PiAlarm Windows">
 </p>
 
 ##   My requirements for this were:
