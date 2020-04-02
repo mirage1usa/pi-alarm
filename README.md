@@ -6,6 +6,10 @@
    Instructions and examples are resonably well documented in the example School.py alarm file.
    This was created as a fun way to keep our daughter on a schedule, while school was closed for COVID-19.
    
+<p align="center">
+<img width="834" height=auto src="./PiAlarm-example.jpg" alt="Examples of PiAlarm Windows">
+</p>
+
 ##   My requirements for this were:
 * Must only use Python scripts and crontabs
 * Must have minimal dependancies
@@ -26,19 +30,28 @@
 ## Dependancies: 
 `Python3`, `GUIZero`, `MPG123`
 
-Create separate of these .py files for different messages
-Open crontab file by running this in Terminal `crontab -e`
-
-Examples of what to add to the crontab file. This will execute the School.py script every Monday-Friday at 8AM
-`  0 8 * * 1,2,3,4,5 DISPLAY=:0 /usr/bin/python3 /home/pi/PiAlarm/School.py`
-
 ## Install Python 3:
 `sudo apt-get install build-essential tk-dev libncurses5-dev libncursesw5-dev libreadline6-dev libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev libbz2-dev libexpat1-dev liblzma-dev zlib1g-dev libffi-dev -y`
 
 ## Install GUIZero:
 `sudo pip3 install guizero`
-   About GUIZero:    https://lawsie.github.io/guizero/window/
+
+About GUIZero:    https://lawsie.github.io/guizero/window/
 
 ## Install MPG123:
 `sudo apt-get install mpg123`
-   About MPG123:     https://www.mpg123.org/
+
+About MPG123:     https://www.mpg123.org/
+
+## Clone Pi-Alarm Git to your computer
+```sh
+git clone https://github.com/pi-alarm/pi-alarm.git
+cd pi-alarm
+python3 pialarm.py
+```
+## Pi-Alarm Usage
+Create separate copies of the .py script files for different messages (make copies of School.py example and edit them)
+Open crontab file by running this in Terminal `crontab -e`
+
+Examples of what to add to the crontab file. This will execute the School.py script every Monday-Friday at 8AM
+`  0 8 * * 1,2,3,4,5 DISPLAY=:0 /usr/bin/python3 /home/pi/PiAlarm/School.py`
