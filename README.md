@@ -7,7 +7,7 @@
    This was created as a fun way to keep our daughter on a schedule, while school was closed for COVID-19.
    
 <p align="center">
-<img width="834" height=auto src="./PiAlarm-example.jpg" alt="Examples of PiAlarm Windows">
+<img width="834" height=auto src="PiAlarm-example.jpg" alt="Examples of PiAlarm Windows">
 </p>
 
 ##   My requirements for this were:
@@ -47,7 +47,6 @@ About MPG123:     https://www.mpg123.org/
 ```sh
 git clone https://github.com/pi-alarm/pi-alarm.git
 cd pi-alarm
-python3 pialarm.py
 ```
 ## Pi-Alarm Usage
 Create separate copies of the .py script files for different messages (make copies of School.py example and edit them)
@@ -57,3 +56,9 @@ Open crontab file by running this in Terminal `crontab -e`
 Examples of what to add to the crontab file. This will execute the School.py script every Monday-Friday at 8AM
 
 `  0 8 * * 1,2,3,4,5 DISPLAY=:0 /usr/bin/python3 /home/pi/PiAlarm/School.py`
+
+## Testing your alerts
+```sh
+cd pi-alarm
+python3 School.py
+```
