@@ -15,8 +15,6 @@
 * Must have minimal dependancies
 * Must pop a customizable alert on the screen and play a sound
 * Must be a good introduction to expose beginners to python and crontab usage
-	  
-   I fought with many different sound apps and finally found that `MPG123` was the only one that accomplished what I needed
    
 ##   Primary options in the python files:
 *  Sound file to play or comment out if you don't want sound
@@ -43,6 +41,8 @@ About GUIZero:    https://lawsie.github.io/guizero/window/
 
 About MPG123:     https://www.mpg123.org/
 
+   I fought with many different sound apps and finally found that `MPG123` was the only one that accomplished what I needed
+
 ## Clone Pi-Alarm Git to your computer
 ```sh
 git clone https://github.com/pi-alarm/pi-alarm.git
@@ -51,7 +51,9 @@ python3 pialarm.py
 ```
 ## Pi-Alarm Usage
 Create separate copies of the .py script files for different messages (make copies of School.py example and edit them)
+
 Open crontab file by running this in Terminal `crontab -e`
 
 Examples of what to add to the crontab file. This will execute the School.py script every Monday-Friday at 8AM
+
 `  0 8 * * 1,2,3,4,5 DISPLAY=:0 /usr/bin/python3 /home/pi/PiAlarm/School.py`
