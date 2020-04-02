@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 
-## PiAlarm
+## Pi-Alarm
 ## Create separate of these .py files for different messages
 ## Open crontab file by running this in Terminal "crontab -e"
 ##
 ## Examples of what to add to the crontab file
-##   0 8 * * 1,2,3,4,5 DISPLAY=:0 /usr/bin/python3 /home/pi/PiAlarm/WakeUp.py
+##   0 8 * * 1,2,3,4,5 DISPLAY=:0 /usr/bin/python3 /home/pi/pi-alarm/WakeUp.py
 ## This will execute the WakeUp.py script every Monday-Friday at 8AM
 ##
 ## Install Python 3: sudo apt-get install build-essential tk-dev libncurses5-dev libncursesw5-dev libreadline6-dev libdb5.3-dev libgdbm-dev libsqlite3-dev libssl-dev libbz2-dev libexpat1-dev liblzma-dev zlib1g-dev libffi-dev -y
@@ -15,7 +15,7 @@
 ## About MPG123:     https://www.mpg123.org/
 
 from guizero import App, Text
-import subprocess, os, time
+import subprocess, os
 
 # Function to Close the Window
 def closewindow():
@@ -23,7 +23,7 @@ def closewindow():
 
 # Play a sound file
 # Options [-q = quiet] [-f = scalefactor for volume control default(max): 32768 (0-32768)]
-playsound = os.popen('mpg123 -q -f 15000 /home/pi/PiAlarm/School-bell-sound-effect.mp3', 'w')
+playsound = os.popen('mpg123 -q -f 25000 /home/pi/pi-alarm/School-bell-sound-effect.mp3', 'w')
 
 # Display GUI window
 app = App(title="PiAlarm", bg = "green", height=200, width=500)
