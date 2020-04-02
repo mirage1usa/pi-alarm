@@ -26,7 +26,7 @@ def closewindow():
 playsound = os.popen('mpg123 -q -f 25000 /home/pi/pi-alarm/School-bell-sound-effect.mp3', 'w')
 
 # Display GUI window
-app = App(title="PiAlarm", bg = "green", height=200, width=500)
+app = App(title="Pi-Alarm", bg = "green", height=200, width=500)
 Alarm = Text(app, text="", size=40, font="Arial", color="black")
 Alarm = Text(app, text="Time for SCHOOL!", size=40, font="Arial", color="white")
 app.after(200000, closewindow) # Time in milliseconds to wait before closing window
